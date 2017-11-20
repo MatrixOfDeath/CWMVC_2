@@ -1,0 +1,23 @@
+<?php \Controllers\Page::loadFragments("header");?>
+<section id="content">
+    <h1> Panel de connexion</h1>
+<main>
+	<form action="Utilisateur/login" method="POST">
+<ul class="form-style-1">
+    <li><label>Login : </label>
+        <input type="email" name="email" class="field-divided" placeholder="Exemple@mail.com" />&nbsp;
+    </li>
+    <li>
+        <label>Mot de passe : </label>
+        <input type="password" name="passwd" class="field-divided" placeholder="Saisir votre mot de passe "/>
+    </li>
+    <li>
+        <input name="submitLogin" type="submit" value="Validé" />
+    </li>
+</ul>
+</form>
+</main>
+</section>
+
+<?php \Controllers\Page::loadFragments("footer");?>
+

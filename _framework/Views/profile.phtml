@@ -1,0 +1,43 @@
+
+<?php \Controllers\page::loadFragments("header");?>
+
+<h1> Bienvenue dans votre profile</h1>
+<section id="content">
+<main>
+    <?php if(isset($message)): ?>
+    <span class="error-message" ><?php echo $message; ?></span>
+    <?php endif; ?>
+	<form enctype="multipart/form-data" id="form_profile" action="" method="POST">
+ <ul class="form-style-1">
+    <li><label>Nom : </label>
+        <input type="text" name="nom" class="field-divided" placeholder="Saisir un nom" value="<?php echo $User->nom; ?>"/>
+    </li>
+    <li>
+        <label>Prénom : </label>
+        <input type="text" name="prenom" class="field-divided" placeholder="Saisir un prénom" value="<?php echo $User->prenom; ?>" />
+    <li>
+    <li>
+        <label>Email : </label>
+        <input type="email" name="email" class="field-divided" placeholder="Saisir un email" value="<?php echo $User->email; ?>" />
+    <li>
+    <li>
+        <label>Mot de passe  : </label>
+        <input type="password" name="passwd" class="field-divided" placeholder="Saisir un mot de passe" value="<?php echo $User->passwd; ?>" />
+     </li>
+     <li class="avatar">
+         <label>Choisissez un avatar : </label><input name="avatar" accept="image/gif, image/jpeg, image/png" type="file" /><br />
+         <img class="img_avatar" title="Votre avatar" alt="Votre avatar" src="<?php echo $src_img;?>"
+     </li>
+    <li>
+        <input name="submitProfile" type="submit" value="Valider" />
+    </li>
+     <input type="hidden" name="id" value="<?php echo $User->id; ?>" />
+</ul>
+</form>
+</main>
+ 
+</section>
+
+<?php \Controllers\Page::loadFragments("footer");?>
+
+

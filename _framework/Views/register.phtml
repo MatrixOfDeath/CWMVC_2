@@ -1,0 +1,32 @@
+
+<?php \Controllers\page::loadFragments("header"); ?>
+<section id="content">
+    <h1> Veuillez vous enregistrer </h1>
+<main>
+	<form action="Utilisateur/Register" method="POST">
+<ul class="form-style-1">
+    <li><label>Nom : <input type="text" name="nom" class="field-divided" placeholder="Nom" />&nbsp; </label>
+    </li>
+    <li>
+        <label>Prénom : <input type="text" name="prenom" class="field-divided" placeholder="Prénom" >
+        </label>
+    <li>
+    <li>
+        <label>Email : <input type="text" name="email" class="field-divided" placeholder="Email" >
+        </label>
+    <li>
+    <li>
+        <label>mot de passe :<input type="password" name="passwd" class="field-divided" placeholder="mot de passe" >
+        </label>
+    <li>
+        <input name="submitRegister" type="submit" value="Valider" />
+    </li>
+</ul>
+</form>
+</main>
+ 
+</section>
+
+<?php \Controllers\Page::loadFragments("footer");?>
+
+

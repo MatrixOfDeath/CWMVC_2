@@ -1,0 +1,11 @@
+#on active la reecriture d'unl
+RewriteEngine ON
+
+#on ce base sur le sous repertoire php pour commencer la reecriture
+RewriteBase /
+
+#si le fichier dans l'url n'existe pas alors
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#on passe en argument dans le variable route la valeur de $1 qui correspond
+RewriteRule (^.*$) index.php?route=$1 [L,QSA]
